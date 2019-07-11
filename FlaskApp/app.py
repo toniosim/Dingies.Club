@@ -8,8 +8,6 @@ import os, sys
 app = Flask(__name__)
 app_title = "Dingies Club"
 author = "Booty Gang"
-rel_dir = os.path.realpath(".") + "/static/sounds/cardsounds"
-sound_dir = os.path.normpath(rel_dir)
 
 #only one page, all on index
 @app.route("/")
@@ -19,4 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(debug=False)
