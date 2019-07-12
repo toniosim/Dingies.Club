@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Dingies Club</title>
+	<title>Hearthstone Soundboard Flask App</title>
 
 	<link href="..\static\css\bootstrap.min.css" rel="stylesheet">
 	<link href="..\static\css\jumbotron.css" rel="stylesheet">
 	<link href="..\static\css\hssb.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="..\static\js\buttoncolor.js"></script>
-
 </head>
 
 <body>
@@ -31,7 +30,29 @@
 
 		<div class="jumbotron">
 			<h1 class="title">{{ app_title }}</h1>
-			<p>:]</p>
+				<p class="lead"></p>
+				{% for row in card_rows %}
+				<button class="accordion cardname" id="{{row["cardid"]}}" >
+				<script> assignColor({{row["cardid"]}}, {{row["cardclass"]}}) </script>
+				{{row["cardname"]}}</button>
+
+				<div class="panel">
+					{% for sound_row in sound_rows %}
+					{% if sound_row["cardid"] == row["cardid"] %}
+					<audio id="Play" preload="none">
+					<source src=
+					"..\static\sounds\cardsounds\{{sound_row["cardname"]}}\sounds\{{sound_row["soundfile"]}} " 
+					type="audio/mpeg">
+					</audio>
+					<button class="sound">{{sound_row["soundfile"]}}</button>
+					{% endif %}
+					{% endfor %}
+					
+				</div>
+				{% endfor %}
+				<script src="..\static\js\accordion.js"> </script>
+				<script src="..\static\js\sounds.js"> </script>
+				
 		</div>
 
 	    <footer class="footer">
