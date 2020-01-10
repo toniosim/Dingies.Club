@@ -42,4 +42,4 @@ def hssb():
 	return render_template("hssb.html", app_title=app_title, author=author, card_rows=card_rows, sound_rows=sound_rows)
 
 if __name__ == "__main__":
-	app.run(debug=False)
+	app.run(host='0.0.0.0')
