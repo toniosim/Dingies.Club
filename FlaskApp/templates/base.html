@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Dingies Club</title>
+
+	<link href="..\static\css\bootstrap.min.css" rel="stylesheet">
+	<link href="..\static\css\jumbotron.css" rel="stylesheet">
+	<link href="..\static\css\hssb.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="..\static\js\buttoncolor.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="header">
+			{% if title%}
+			<h1 class="title">{{ app_title }} - Dingies Club</h1>
+			{% else %}
+			<h1 class="title">Dingies Club</h1>
+			{% endif %}
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="/">Home</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/about">About</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/hssb">HSSB</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+		
+		<hr>
+		<div class="jumbotron">
+			{% block content %}{% endblock %}
+		</div>
+		<hr>
+	    <footer class="footer">
+	    	<p>by {{ author }}</p>
+	    </footer>
+
+   </div>
+</body>
+</html>

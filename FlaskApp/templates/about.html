@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Dingies Club</title>
-
-	<link href="..\static\css\bootstrap.min.css" rel="stylesheet">
-	<link href="..\static\css\jumbotron.css" rel="stylesheet">
-	<link href="..\static\css\hssb.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="..\static\js\buttoncolor.js"></script>
-
-</head>
-
-<body>
-
-	<div class="container">
-		<div class="header">
-			<nav>
-				<ul class="nav-pills pull-right">
-					<li role="presentation"><a href="/">Home </a></li>
-					<li role="presentation"><a href="/about">About </a></li>
-					<li role="presentation"><a href="/hssb">HSSB</a></li>
-				</ul>
-			</nav>
-		</div>
-
-		<div class="jumbotron">
-			<h1 class="title">{{ app_title }}</h1>
-			<p>This here is the <b>Dingies Club</b>.<br>
-				A place for dingies to create and share their dumb shit.<br>
-				Enjoy!
-			</p>
-		</div>
-
-	    <footer class="footer">
-	    	<p>by {{ author }}</p>
-	    </footer>
-
-   </div>
-</body>
-</html>
+{% block content %}
+<p>Create an account to be in the <b>Dingies Club</b>.<br></p>
+{% endblock %}

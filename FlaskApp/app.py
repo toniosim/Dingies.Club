@@ -13,7 +13,7 @@ author = "Booty Gang"
 @app.route("/")
 def main():
 	#passing to index
-	return render_template("index.html", app_title=app_title, author=author)
+	return render_template("index.html", author=author)
 
 #about page
 @app.route("/about")
@@ -23,6 +23,7 @@ def about():
 #hearthstone stoundboard
 @app.route("/hssb")
 def hssb():
+	app_title = "HSSB"
 	card_conn = sqlite3.connect("cards.db")
 	sound_conn = sqlite3.connect("cardsounds.db")
 
