@@ -18,12 +18,11 @@ def main():
 #about page
 @app.route("/about")
 def about():
-	return render_template("about.html", app_title=app_title, author=author)
+	return render_template("about.html", app_title="About", author=author)
 
 #hearthstone stoundboard
 @app.route("/hssb")
 def hssb():
-	app_title = "HSSB"
 	card_conn = sqlite3.connect("cards.db")
 	sound_conn = sqlite3.connect("cardsounds.db")
 
@@ -45,7 +44,7 @@ def hssb():
 	sound_conn.close()
 
 	#passing to index
-	return render_template("hssb.html", app_title=app_title, author=author, card_rows=card_rows, sound_rows=sound_rows)
+	return render_template("hssb.html", app_title="HSSB", author=author, card_rows=card_rows, sound_rows=sound_rows)
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0')
