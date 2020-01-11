@@ -15,6 +15,11 @@ def main():
 	#passing to index
 	return render_template("index.html", app_title=app_title, author=author)
 
+#about page
+@app.route("/about")
+def about():
+	return render_template("about.html", app_title=app_title, author=author)
+
 #hearthstone stoundboard
 @app.route("/hssb")
 def hssb():
