@@ -7,7 +7,7 @@ import os, sys
 
 app = Flask(__name__)
 app_title = "Dingies Club"
-author = "Booty Gang"
+author = "Tones"
 
 #only one page, all on index
 @app.route("/")
