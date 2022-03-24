@@ -3,6 +3,21 @@
 
 from flask import Flask, render_template, url_for
 
+posts = [
+    {
+        'author': 'Corey Schafer',
+        'title': 'Blog Post 1',
+        'content': 'First post content',
+        'date_posted': 'April 20, 2018'
+    },
+    {
+        'author': 'Jane Doe',
+        'title': 'Blog Post 2',
+        'content': 'Second post content',
+        'date_posted': 'April 21, 2018'
+    }
+]
+
 app = Flask(__name__)
 app_title = "Dingies Club"
 author = "Tones"
@@ -11,7 +26,7 @@ author = "Tones"
 @app.route("/")
 def main():
 	#passing to index
-	return render_template("index.html", author=author)
+	return render_template("index.html", author=author, posts=posts)
 
 #about page
 @app.route("/about")
