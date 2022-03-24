@@ -34,4 +34,5 @@ def about():
 	return render_template("about.html", app_title="About", author=author)
 
 if __name__ == "__main__":
-	app.run(debug=True)
+    # the host part is so that I can run access it from phone on same network
+	app.run(debug=True, host="0.0.0.0")
