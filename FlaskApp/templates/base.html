@@ -27,7 +27,6 @@
         {% else %}
         <h1 class="title">Dingies Club</h1>
         {% endif %}
-    </header>
 
         <! navbar>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,39 +46,41 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="It does nothing!" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="It does nothing!"
+                           aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>
+    </header>
 
-        <hr>
-        <div class="jumbotron">
-            <main role="main" class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        {% block content %}{% endblock %}
-                    </div>
-                    <div class="col-md-4">
-                        <div class="content-section">
-                            <h3>Our Sidebar</h3>
-                            <p class='text-muted'>A bar on the side that also does nothing.
-                            <ul class="list-group">
-                                <li class="list-group-item list-group-item-light">Shid</li>
-                                <li class="list-group-item list-group-item-light">Fard</li>
-                                <li class="list-group-item list-group-item-light">Buttz</li>
-                                <li class="list-group-item list-group-item-light">lolz</li>
-                            </ul>
-                            </p>
-                        </div>
+    <hr>
+    <div class="jumbotron">
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="col-md-4">
+                    <div class="content-section">
+                        <h3>Our Sidebar</h3>
+                        <p class='text-muted'>A bar on the side that also does nothing.
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light">Shid</li>
+                            <li class="list-group-item list-group-item-light">Fard</li>
+                            <li class="list-group-item list-group-item-light">Buttz</li>
+                            <li class="list-group-item list-group-item-light">lolz</li>
+                        </ul>
+                        </p>
                     </div>
                 </div>
-            </main>
-        </div>
-        <hr>
-        <footer class="footer">
-            <p>by {{ author }}</p>
-        </footer>
+            </div>
+        </main>
+    </div>
+    <hr>
+    <footer class="footer">
+        <p>by {{ author }}</p>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
